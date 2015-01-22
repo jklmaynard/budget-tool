@@ -1,15 +1,4 @@
-require('rspec')
-require('expense')
-require('pry')
-require('pg')
-
-DB = PG.connect({ :dbname => 'budget_test' })
-
-RSpec.configure do |config|
-  config.after(:each) do
-    DB.exec("DELETE FROM expenses *;")
-  end
-end
+require('spec_buddy')
 
 describe(Expense) do
   describe("#name") do
