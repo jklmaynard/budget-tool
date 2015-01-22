@@ -1,0 +1,25 @@
+<h1>You Spend Too Much Money! Keep Track Here!</h1>
+
+<form action="/" method="post">
+  <label for="purchase">What did you buy?</label>
+  <input type="text" name="purchase" id="purchase">
+<br>
+  <label for="cost">How much did you ACTUALLY spend, nincompoop?</label>
+  <input type="text" name="cost" id="cost">
+<br>
+  <label for="purchase_date">What day did you make such a foolish purchase?</label>
+  <input type="text" name="purchase_date" id="purchase_date">
+<br>
+  <button type="submit">Submit</button>
+</form>
+
+<h3>Pay attention to what you are doing with your Money, Chump!</h3>
+<ul>
+  <% @entries.each() do |entry| %>
+    <li>
+      <p>
+        Purchase: <%= entry.name() %> || Cost: <%= entry.amount() %> || Date: <%= entry.date() %>
+      </p>
+    </li>
+  <% end %>
+</ul>
