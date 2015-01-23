@@ -1,6 +1,13 @@
 <h1>You Spend Too Much Money! Keep Track Here!</h1>
 
-<form action="/" method="post">
+<form action="/types" method="post">
+  <label for="type">Please create your new category here:</label>
+  <input type="text" name="type" id="type">
+
+  <button type="submit">Go!</button>
+</form>
+
+<form action="/purchases" method="post">
   <label for="purchase">What did you buy?</label>
   <input type="text" name="purchase" id="purchase">
 <br>
